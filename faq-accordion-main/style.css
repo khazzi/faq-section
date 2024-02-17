@@ -1,0 +1,213 @@
+body {
+    background: hsl(275, 100%, 97%);
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+    font-family: "WorkSans";
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "WorkSans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.view {
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.faq-header {
+    padding-right: 10px;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    img {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+}
+.faq-question {
+    font-size: 18px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+
+        background-color: hsl(292, 94%, 53%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding: 18px;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        border-radius: 200px;
+    }
+}
+.faq-question:hover {
+    font-size: 18px;
+    color: rgb(151, 6, 122);
+}
+.faq-answer {
+    display: none;
+    font-size: 17px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 5px;
+}
+.faq-question.active + .faq-answer {
+    display: block;
+
+}
+ /* Style the plus/minus sign */
+ .faq-question button::after  {
+
+    content: "+"; /* Initial plus sign */
+
+}
+.faq-question.active button::after {
+        z-index: 3;
+        content: "-"; /* Minus sign when active */
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 20px;
+        height: 10px;
+        cursor: pointer;
+        padding: 18px;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        border-radius: 100px;
+    
+}
+.hr {
+    border-bottom: 1px solid rgb(244, 239, 239);
+    margin-top: 20px;
+}
+button {
+
+    background-color: hsl(292, 94%, 53%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    border-radius: 200px;
+}
+.expanded {
+    content: "-";
+    z-index: 3;
+    content: "-"; /* Minus sign when active */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    border-radius: 100px;
+}
+p {
+    color: hsl(280, 4%, 68%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 500px) {
+    .view {
+        width: 300px;
+        min-height: 50%;
+        padding: 5px 10px 5px 10px;
+    }
+    .faq-header {
+        font-size: 28px;
+    }
+    .faq-question {
+        font-size: 15px;
+    }
+    .hr {
+        margin-top: 10px;
+    }
+    button {
+        font-size: 20px;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .view {
+        width: 200px;
+        min-height: 50%;
+        padding: 5px 10px 5px 10px;
+    }
+    .faq-header {
+        font-size: 28px;
+    }
+    .faq-question {
+        font-size: 15px;
+    }
+    .hr {
+        margin-top: 10px;
+    }
+    button {
+        font-size: 20px;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .view {
+        width: 400px;
+        min-height: 50%;
+        padding: 5px 10px 5px 10px;
+    }
+    .faq-header {
+        font-size: 35px;
+    }
+    .faq-question {
+        font-size: 15px;
+    }
+    .hr {
+        margin-top: 10px;
+    }
+    button {
+        font-size: 20px;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+}
